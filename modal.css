@@ -454,7 +454,7 @@ input[data-error]::after {
   font-size: 1.3rem;
   padding: 15px 23px;
   margin: 0;
-  margin-top: 59px;
+  /*margin-top: 59px;*/
 }
 .hero-img {
   grid-column: span 8;
