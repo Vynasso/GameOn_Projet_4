@@ -1,8 +1,10 @@
 function editNav() {
     let x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
+    if (x.className === "top-nav") {
+        console.log("responsive added")
         x.className += " responsive";
     } else {
+        console.log("responsive closed")
         x.className = "topnav";
     }
 }
