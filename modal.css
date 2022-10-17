@@ -127,7 +127,7 @@ main {
 
 }
 
-.modal-btn {
+.modalBtn {
     font-size: 145%;
     background: #fe142f;
     display: flex;
@@ -139,7 +139,7 @@ main {
     cursor: pointer;
 }
 
-.modal-btn:hover {
+.modalBtn:hover {
     background: #3876ac;
 }
 
@@ -169,7 +169,7 @@ main {
     font-size: 16px;
 }
 
-.bground {
+.bgGround {
     display: none;
     position: fixed;
     z-index: 1;
@@ -589,3 +589,36 @@ footer {
     }
 }
 
+
+/**************** Formulaire de confirmation ***************/
+
+.formConfirmation{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(26, 39, 156, 0.4);
+}
+.formConfirmation > .content{
+    display: flex;
+    justify-content: center;
+    padding: 0%;
+    height: 100%;
+}
+
+
+.formConfirmation > .content .btn-submit{
+    position:absolute;
+    bottom: 10%;
+    display: flex;
+    left: 28%;
+}
+
+.formConfirmation > .content p{
+    display: flex;
+    padding-top: 100%;
+}
