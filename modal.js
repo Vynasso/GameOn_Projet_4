@@ -269,6 +269,17 @@ function closeModal() {
             inputs.forEach(input=> {
                 input.value = "";
             })
+
+    document.getElementById("firstNameError").innerHTML = "";
+    firstName.style.border = "2px solid white";
+    document.getElementById("lastNameError").innerHTML = "";
+    lastName.style.border = "2px solid white";
+    document.getElementById("emailError").innerHTML = "";
+    email.style.border = "2px solid white"
+    document.getElementById("birthdateError").innerHTML = "";
+    birthdate.style.border = "2px solid white"
+    document.getElementById("quantityError").innerHTML = "";
+    participateTournaments.style.border = "2px solid white"
     // const checkbox = document.querySelectorAll("#location1, #location2, #location3, #location4, #location5, #location6")
     // checkbox.forEach(check => {
     //     console.log(check.value)
