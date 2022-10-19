@@ -131,6 +131,9 @@ img {
         min-width: 0;
         padding:0;
     }
+    .hero-text {
+        font-size: 0.8rem!important;
+    }
 }
 
 main {
@@ -217,7 +220,12 @@ main {
 
 .modal-body {
     padding: 15px 8%;
-    margin: 15px auto;
+    /*margin: 15px auto;*/
+}
+
+.modal-confirmation {
+    padding: 15px 8%;
+    display: flex;
 }
 
 label {
@@ -626,7 +634,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 0;
-    height: 100%;
+    height: 70%;
 }
 
 
@@ -639,5 +647,5 @@ footer {
 
 .formConfirmation > .content p{
     display: flex;
-    padding-top: 100%;
+    align-items: center;
 }
