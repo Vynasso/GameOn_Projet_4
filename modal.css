@@ -43,15 +43,18 @@ img {
     float: right;
 }
 
-@media screen and (max-width: 1107px ){
-    .top-nav a.icon {
-        /*float: right;*/
-        /*display: block;*/
+@media screen and (max-width: 1100px ){
+    .top-nav a {
+        display: none!important;
     }
-
-    .main-navbar {
-        /*display: flex;*/
-        /*flex-direction: column;*/
+    .top-nav .responsive a{
+        float: none;
+        display: block!important;
+        text-align: left;
+    }
+    .top-nav .icon {
+        float: right;
+        display: block!important;
     }
 }
 
@@ -90,7 +93,7 @@ img {
 
     .top-nav a.icon {
         float: right;
-        display: block;
+        display: block!important;
     }
 }
 
@@ -107,7 +110,7 @@ img {
 
     .top-nav.responsive a {
         float: none;
-        display: block;
+        display: block!important;
         text-align: left;
     }
 }
@@ -122,6 +125,11 @@ img {
         float: right;
         display: block;
         margin-top: -15px;
+    }
+    .hero-content {
+        width: 100%;
+        min-width: 0;
+        padding:0;
     }
 }
 
@@ -494,9 +502,9 @@ button {
 }
 
 .hero-headline {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: normal;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 
 .hero-text {
@@ -523,6 +531,7 @@ button {
     height: 100%;
     display: block;
     padding: 0;
+    object-fit: cover;
 }
 
 .copyrights {
@@ -564,7 +573,7 @@ footer {
     }
 
     .hero-headline {
-        font-size: 4.5rem;
+        font-size: 2.5rem;
         white-space: normal;
     }
 

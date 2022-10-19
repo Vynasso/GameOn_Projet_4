@@ -5,7 +5,7 @@ function editNav() {
         x.className += " responsive";
     } else {
         console.log("responsive closed")
-        x.className = "topnav";
+        x.className = "top-nav";
     }
 }
 
@@ -31,8 +31,10 @@ let regexFirstAndLastName = /^[a-z ,.'-]+$/i
 
 // Customized error messages for each input conformity
 const messagesErrors = {
-    NameError_1: "Veuillez entrer 2 caractères ou plus pour le champ du prénom.",
-    NameError_2: "Seul l'alphabet est accepté",
+    firstNameError_1: "Veuillez entrer 2 caractères ou plus pour le champ du prénom.",
+    firstNameError_2: "Seul l'alphabet est accepté",
+    lastNameError_1: "Veuillez entrer 2 caractères ou plus pour le champ du nom.",
+    lastNameError_2: "Seul l'alphabet est accepté",
     emailError_1: "Veuillez entrer une adresse mail valide",
     birthdateError_1: "Veuillez entrer une date de naissance",
     birthdateError_2 : "Vous devez être majeur pour participer à cet évènement",
@@ -49,21 +51,25 @@ const messagesErrors = {
 function isFirstNameValid() {
     if (firstName.value.length < 2) {
         let firstNameErrorMessage = document.getElementById("firstNameError");
-        firstNameErrorMessage.innerHTML = messagesErrors.NameError_1
+        firstNameErrorMessage.innerHTML = messagesErrors.firstNameError_1
         firstNameErrorMessage.style.color = "red"
         firstNameErrorMessage.style.fontSize = "1rem"
         firstName.style.border = "2px solid red";
         return false;
     } else if (!regexFirstAndLastName.test(firstName.value)) {
         let firstNameErrorMessage = document.getElementById("firstNameError");
-        firstNameErrorMessage.innerHTML = messagesErrors.NameError_2
+        firstNameErrorMessage.innerHTML = messagesErrors.firstNameError_2
         firstNameErrorMessage.style.color = "red"
         firstNameErrorMessage.style.fontSize = "1rem"
         firstName.style.border = "2px solid red";
         return false;
     } else {
-        document.getElementById("firstNameError").innerHTML = "";
-        firstName.style.border = "2px solid white";
+        let firstNameErrorMessage = document.getElementById("firstNameError");
+        firstNameErrorMessage.innerHTML = "Champ valide"
+        firstNameErrorMessage.style.color = "green"
+        firstNameErrorMessage.style.fontSize = "1rem"
+        firstName.style.border = "2px solid green";
+        // document.getElementById("firstNameError").innerHTML = "";
         return true;
     }
 }
@@ -73,21 +79,26 @@ function isFirstNameValid() {
 function isLastNameValid() {
     if (lastName.value.length < 2) {
         let lastNameErrorMessage = document.getElementById("lastNameError");
-        lastNameErrorMessage.innerHTML = messagesErrors.NameError_1
+        lastNameErrorMessage.innerHTML = messagesErrors.lastNameError_1
         lastNameErrorMessage.style.color = "red"
         lastNameErrorMessage.style.fontSize = "1rem"
         lastName.style.border = "2px solid red";
         return false;
     } else if (!regexFirstAndLastName.test(lastName.value)) {
         let lastNameErrorMessage = document.getElementById("lastNameError");
-        lastNameErrorMessage.innerHTML = messagesErrors.NameError_1
+        lastNameErrorMessage.innerHTML = messagesErrors.lastNameError_2
         lastNameErrorMessage.style.color = "red"
         lastNameErrorMessage.style.fontSize = "1rem"
         lastName.style.border = "2px solid red";
         return false;
     } else {
-        document.getElementById("lastNameError").innerHTML = "";
-        lastName.style.border = "2px solid white";
+        let lastNameErrorMessage = document.getElementById("lastNameError")
+        lastNameErrorMessage.innerHTML = "Champ valide"
+        lastNameErrorMessage.style.color = "green"
+        lastNameErrorMessage.style.fontSize = "1rem"
+        lastName.style.border = "2px solid green";
+        // document.getElementById("lastNameError").innerHTML = "";
+        // lastName.style.border = "2px solid white";
         return true;
     }
 }
@@ -102,8 +113,13 @@ function isEmailValid(){
         email.style.border = "2px solid red";
         return false;
     } else {
-        document.getElementById("emailError").innerHTML = "";
-        email.style.border = "2px solid white";
+        let emailErrorMessage = document.getElementById("emailError");
+        emailErrorMessage.innerHTML = "Champ valide"
+        emailErrorMessage.style.color = "green"
+        emailErrorMessage.style.fontSize = "1rem"
+        email.style.border = "2px solid green";
+        // document.getElementById("emailError").innerHTML = "";
+        // email.style.border = "2px solid white";
         return true
     }
 }
@@ -111,9 +127,10 @@ function isEmailValid(){
 // I create the now variable to get the current date, then the currentYear variable to get the current year.
 // The first condition makes sure that the date input has been filled, the second one makes sure that the user is of age.
 // If these two conditions are met, I accept the user's input
-let now = new Date();
-let currentYear = now.getFullYear();
+
 function isBirthdateValid() {
+    let now = new Date();
+    let currentYear = now.getFullYear();
     let registeredDate = new Date(birthdate.value)
     if (birthdate.value.length < 1) {
         let birthDateErrorMessage = document.getElementById("birthdateError");
@@ -130,8 +147,13 @@ function isBirthdateValid() {
         birthdate.style.border = "2px solid red"
         return false
     } else {
-        document.getElementById("birthdateError").innerHTML = "";
-        birthdate.style.border = "2px solid white";
+        let birthDateErrorMessage = document.getElementById("birthdateError");
+        birthDateErrorMessage.innerHTML = "Champ valide"
+        birthDateErrorMessage.style.color = "green";
+        birthDateErrorMessage.style.fontSize = "1rem"
+        birthdate.style.border = "2px solid green"
+        // document.getElementById("birthdateError").innerHTML = "";
+        // birthdate.style.border = "2px solid white";
         return true;
     }
 }
@@ -146,8 +168,13 @@ function isParticipateTournaments() {
         participateTournaments.style.border = "2px solid red"
         return false
     } else {
-        document.getElementById("quantityError").innerHTML = "";
-        participateTournaments.style.border = "2px solid white"
+        let participateTournamentsErrorMessage = document.getElementById("quantityError")
+        participateTournamentsErrorMessage.innerHTML = "Champ valide";
+        participateTournamentsErrorMessage.style.color = "green";
+        participateTournamentsErrorMessage.style.fontSize = "1rem";
+        participateTournaments.style.border = "2px solid green"
+        // document.getElementById("quantityError").innerHTML = "";
+        // participateTournaments.style.border = "2px solid white"
         return true
     }
 }
