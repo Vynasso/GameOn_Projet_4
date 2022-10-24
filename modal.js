@@ -65,11 +65,8 @@ function isFirstNameValid() {
         return false;
     } else {
         let firstNameErrorMessage = document.getElementById("firstNameError");
-        firstNameErrorMessage.innerHTML = "Champ valide"
         firstNameErrorMessage.style.color = "green"
-        firstNameErrorMessage.style.fontSize = "1rem"
         firstName.style.border = "2px solid green";
-        // document.getElementById("firstNameError").innerHTML = "";
         return true;
     }
 }
@@ -93,12 +90,8 @@ function isLastNameValid() {
         return false;
     } else {
         let lastNameErrorMessage = document.getElementById("lastNameError")
-        lastNameErrorMessage.innerHTML = "Champ valide"
         lastNameErrorMessage.style.color = "green"
-        lastNameErrorMessage.style.fontSize = "1rem"
         lastName.style.border = "2px solid green";
-        // document.getElementById("lastNameError").innerHTML = "";
-        // lastName.style.border = "2px solid white";
         return true;
     }
 }
@@ -114,12 +107,8 @@ function isEmailValid(){
         return false;
     } else {
         let emailErrorMessage = document.getElementById("emailError");
-        emailErrorMessage.innerHTML = "Champ valide"
         emailErrorMessage.style.color = "green"
-        emailErrorMessage.style.fontSize = "1rem"
         email.style.border = "2px solid green";
-        // document.getElementById("emailError").innerHTML = "";
-        // email.style.border = "2px solid white";
         return true
     }
 }
@@ -148,12 +137,8 @@ function isBirthdateValid() {
         return false
     } else {
         let birthDateErrorMessage = document.getElementById("birthdateError");
-        birthDateErrorMessage.innerHTML = "Champ valide"
         birthDateErrorMessage.style.color = "green";
-        birthDateErrorMessage.style.fontSize = "1rem"
         birthdate.style.border = "2px solid green"
-        // document.getElementById("birthdateError").innerHTML = "";
-        // birthdate.style.border = "2px solid white";
         return true;
     }
 }
@@ -169,12 +154,8 @@ function isParticipateTournaments() {
         return false
     } else {
         let participateTournamentsErrorMessage = document.getElementById("quantityError")
-        participateTournamentsErrorMessage.innerHTML = "Champ valide";
         participateTournamentsErrorMessage.style.color = "green";
-        participateTournamentsErrorMessage.style.fontSize = "1rem";
         participateTournaments.style.border = "2px solid green"
-        // document.getElementById("quantityError").innerHTML = "";
-        // participateTournaments.style.border = "2px solid white"
         return true
     }
 }
@@ -246,10 +227,6 @@ document.getElementById("formData")
         }
     })
 
-// Submit Button
-// const btnSubmit = document.getElementById("submit")
-//
-
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -280,11 +257,6 @@ function closeModal() {
     birthdate.style.border = "2px solid white"
     document.getElementById("quantityError").innerHTML = "";
     participateTournaments.style.border = "2px solid white"
-    // const checkbox = document.querySelectorAll("#location1, #location2, #location3, #location4, #location5, #location6")
-    // checkbox.forEach(check => {
-    //     console.log(check.value)
-    //     check.value = false
-    // })
 }
 
 function launchConfirmation() {
