@@ -142,7 +142,7 @@ img {
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 340px) and (max-width: 320px){
     .top-nav a.icon {
         float: right;
         display: block!important;
