@@ -65,6 +65,7 @@ function isFirstNameValid() {
         return false;
     } else {
         let firstNameErrorMessage = document.getElementById("firstNameError");
+        firstNameErrorMessage.innerHTML = ""
         firstNameErrorMessage.style.color = "green"
         firstName.style.border = "2px solid green";
         return true;
@@ -90,6 +91,7 @@ function isLastNameValid() {
         return false;
     } else {
         let lastNameErrorMessage = document.getElementById("lastNameError")
+        lastNameErrorMessage.innerHTML = ""
         lastNameErrorMessage.style.color = "green"
         lastName.style.border = "2px solid green";
         return true;
@@ -107,6 +109,7 @@ function isEmailValid(){
         return false;
     } else {
         let emailErrorMessage = document.getElementById("emailError");
+        emailErrorMessage.innerHTML = ""
         emailErrorMessage.style.color = "green"
         email.style.border = "2px solid green";
         return true
@@ -137,6 +140,7 @@ function isBirthdateValid() {
         return false
     } else {
         let birthDateErrorMessage = document.getElementById("birthdateError");
+        birthDateErrorMessage.innerHTML = ""
         birthDateErrorMessage.style.color = "green";
         birthdate.style.border = "2px solid green"
         return true;
@@ -154,6 +158,7 @@ function isParticipateTournaments() {
         return false
     } else {
         let participateTournamentsErrorMessage = document.getElementById("quantityError")
+        participateTournamentsErrorMessage.innerHTML = ""
         participateTournamentsErrorMessage.style.color = "green";
         participateTournaments.style.border = "2px solid green"
         return true
@@ -205,8 +210,6 @@ function isFormValid() {
     isGeneralCondition()
     return isFirstNameValid() && isLastNameValid() && isEmailValid() && isBirthdateValid() && isGeneralCondition() && isLocation() ;
 }
-
-
 
 //******************** MANAGEMENT OF MODALS************************
 
