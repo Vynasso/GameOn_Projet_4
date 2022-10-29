@@ -123,8 +123,8 @@ img {
 
     .top-nav a.icon {
         float: right;
-        display: block;
-        margin-top: -15px;
+        display: block!important;
+        /*margin-top: -15px;*/
     }
     .hero-content {
         width: 100%;
@@ -133,6 +133,21 @@ img {
     }
     .hero-text {
         font-size: 0.8rem!important;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .top-nav a.icon {
+        float: right;
+        display: block!important;
+    }
+
+    .header-logo {
+        width: 200px;
+    }
+
+    .content {
+        width: 75%;
     }
 }
 
