@@ -136,6 +136,12 @@ img {
     }
 }
 
+@media screen and (min-width: 320px) and (max-width: 5500px){
+    .content {
+        width: 75%!important;
+    }
+}
+
 @media screen and (max-width: 320px){
     .top-nav a.icon {
         float: right;
@@ -146,9 +152,6 @@ img {
         width: 200px;
     }
 
-    .content {
-        width: 75%;
-    }
 }
 
 main {
